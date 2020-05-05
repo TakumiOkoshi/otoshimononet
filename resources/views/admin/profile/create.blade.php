@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset= "utf-8">
-        <meta http-equiv= "X-UA-Compatible" content= "IE=edde">
-        <meta mame= "viewport" content= "width=device-width,initial-scale=1">
-        
-        <title>Kadai1</title>
-    </head>
-    <body>
-        <h1>Kadai1</h1>
-    </body>
-</html>
+
+@extends('layouts.profile')
+
+@section('title', 'プロフィールの作成')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>My プロフィール</h2>
+            </div>
+        </div>
+    </div>
+@endsection
