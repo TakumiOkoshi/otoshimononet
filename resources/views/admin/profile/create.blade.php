@@ -1,4 +1,3 @@
-
 @extends('layouts.profile')
 
 @section('title', 'プロフィールの作成')
@@ -19,7 +18,6 @@
                            @endforeach
                         </ul>
                   @endif
-                  
                   <div class="form-group row">
                       <label class="col-md-5" for="title">氏名</label>
                       <div class="col-md-10">
