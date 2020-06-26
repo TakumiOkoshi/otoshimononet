@@ -1,12 +1,14 @@
 @extends('layouts.admin')
 
-@section('title', 'ニュースの新規作成')
+@section('title', '落とし物の新規作成')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>ニュース新規作成</h2>
+                <h2>落とし物ネット</h2>
+                <br>
+                <p>落とし物情報を登録しよう！</p>
                 <form action="{{ action('Admin\NewsController@create')}}"
                 method="post" 
                 enctype="multipart/form-deta">
@@ -19,7 +21,7 @@
                         </ul>
                   @endif
                    <div class="form-group row">
-                        <label class="col-md-2" for="title">タイトル</label>
+                        <label class="col-md-2" for="title">見つけた物</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                         </div>
