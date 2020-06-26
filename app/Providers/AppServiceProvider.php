@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Providers;
-
 use Illuminate\Support\ServiceProvider;
-
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,9 +10,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+       if ($this->app->isLocal()) {
+            //if local register your services you require for development
+          $this->app->register('Barryvdh\Debugbar\ServiceProvider');
+      }else{
+            //else register your services you require for production
+          $this->app['request']->server->set('HTTPS', true);
+      }
         //
     }
-
     /**
      * Bootstrap any application services.
      *
@@ -25,6 +28,9 @@ class AppServiceProvider extends ServiceProvider
     {
         if(\App::environment('production')){
             \URL::forceScheme('https');
+        }
+        if ($this->app->isLocal()) {
+            \URL::forceScheme('http');
         }
     }
 }
