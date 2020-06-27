@@ -44,3 +44,10 @@ Route::group(['prefix' =>'admin'], function(){
     Route::get('news/delete','Admin\NewsController@delete')->middleware('auth');
     Route::get('/','NewsController@index');
 });
+
+
+Route::get('/', function(){
+    return view('top');
+});
+
+Route::get('/home', 'HomeController@index')->name('home');

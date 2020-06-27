@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,6 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        
         <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     </head>
     <body>
@@ -22,14 +21,16 @@
             
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                    </a>
+                    <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
                     
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" 
+                    type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" 
+                            id="navbarSupportedContent">
                     
                         <ul class="navbar-nav mr-auto">
                         </ul>
@@ -63,7 +64,6 @@
                     </div>
                 </div>
             </nav>
-            
 
             <main class="py-4">
                 @yield('content')
