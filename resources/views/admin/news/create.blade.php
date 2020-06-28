@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.common')
 
 @section('title', '落とし物の新規登録')
 
